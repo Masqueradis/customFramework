@@ -1,0 +1,29 @@
+services:
+  php:
+    build: 
+      context: ..
+      dockerfile: docker/php/Dockerfile
+    container_name: ${PROJECT_NAME}_php
+    volumes:
+      - ../app:/var/www/html
+    networks:
+      - ${PROJECT_NAME}
+
+  nginx:
+    build:
+      context: .
+      dockerfile: nginx/Dockerfile
+    container_name: ${PROJECT_NAME}_nginx
+    ports:
+    - "${APP_PORT}:80"
+    volumes:
+      - ../app:/var/www/html
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php
+    networks:
+      - ${PROJECT_NAME}
+
+networks:
+  FrameworkTask:
+    driver: bridge
