@@ -16,8 +16,6 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
 		intl \
 		bcmath \
 		opcache \
-		pdo \
-		pdo_pgsql \
 		gd
 
 RUN pecl install imagick \
@@ -34,4 +32,4 @@ COPY --from=composer/composer:latest /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www/html
 
-COPY ./app /var/www/html
+COPY ./src /var/www/html
