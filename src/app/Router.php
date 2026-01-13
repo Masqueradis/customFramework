@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 namespace app;
+
 use app\Route;
 use app\InfoController;
 use app\HomeController;
@@ -10,6 +11,7 @@ use app\HomeController;
 class Router
 {
     private array $routes = [];
+
     public function registerController(string $className): void
     {
         $reflection = new \ReflectionClass($className);
