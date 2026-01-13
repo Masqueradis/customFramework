@@ -8,7 +8,7 @@ namespace App;
 class HomeController
 {
     #[Route('/hello')]
-    public function hello()
+    public function hello(): void
     {
         printf('Hello World');
     }

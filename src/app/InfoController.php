@@ -8,7 +8,7 @@ namespace App;
 class InfoController
 {
     #[Route('/important')]
-    public function info()
+    public function info(): void
     {
         printf('Some important information');
     }
