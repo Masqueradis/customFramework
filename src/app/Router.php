@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace app;
+namespace App;
 
-use app\Route;
-use app\InfoController;
-use app\HomeController;
+use App\Route;
+use App\InfoController;
+use App\HomeController;
 
 class Router
 {

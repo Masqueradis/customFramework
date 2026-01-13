@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use app\Router;
-use app\InfoController;
-use app\HomeController;
+use App\Router;
+use App\InfoController;
+use App\HomeController;
 
 const CONTROLLERS = [
     HomeController::class,
