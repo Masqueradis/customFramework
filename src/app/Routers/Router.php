@@ -48,10 +48,6 @@ class Router
                $basePathRaw = $paths[0];
                $basePath = realpath($basePathRaw);
 
-               if($basePath === false){
-                   throw new \Exception('Unable to locate namespace path: ' . $basePathRaw);
-               }
-
                $subPath = substr($namespace, strlen($prefixClean));
                $subPath = trim($subPath, '\\');
 
