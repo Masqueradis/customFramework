@@ -2,7 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App;
+namespace App\Controllers;
+
+use App\Routers\Route;
 
 #[Route('/home')]
 class HomeController

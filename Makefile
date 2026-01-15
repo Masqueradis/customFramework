@@ -19,4 +19,4 @@ bash:
 	${DOCKER_COMPOSE} exec php bash
 
 ps:
-	${DOCKER_COMPOSE} ps 
+	${DOCKER_COMPOSE} ps

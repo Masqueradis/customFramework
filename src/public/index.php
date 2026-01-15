@@ -2,24 +2,12 @@
 
 declare(strict_types=1);
 
-require_once __DIR__ . '/../vendor/autoload.php';
+$loader = require_once __DIR__ . '/../vendor/autoload.php';
 
-use App\Router;
-use App\InfoController;
-use App\HomeController;
+use App\Routers\Router;
 
-const CONTROLLERS = [
-    HomeController::class,
-    InfoController::class
-];
+$router = new Router($loader);
 
-$router = new Router();
+$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-foreach(CONTROLLERS as $controller)
-{
-    $router->registerController($controller);
-}
-
-$requestUri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-
-$router->dispatch($requestUri);
+$router->dispatch('App\Controllers\\', $uri);
