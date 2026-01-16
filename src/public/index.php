@@ -2,9 +2,11 @@
 
 declare(strict_types=1);
 
-$loader = require_once __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 use Masqueradis\Routers\Router;
+
+$loader = require __DIR__ . '/../vendor/autoload.php';
 
 $router = new Router($loader);
 
