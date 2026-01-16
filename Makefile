@@ -1,6 +1,6 @@
 DOCKER_COMPOSE=docker compose -f docker/docker-compose.yml --env-file docker/.env
 
-.PHONY: start stop install terminal ps restart
+.PHONY: start stop install terminal ps restart autoload
 
 up:
 	${DOCKER_COMPOSE} up -d 
@@ -20,3 +20,6 @@ bash:
 
 ps:
 	${DOCKER_COMPOSE} ps 
+
+autoload:
+	cd src && composer dump-autoload
