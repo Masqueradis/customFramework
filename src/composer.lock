@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "masqueradis/router",
-            "version": "1.0.1",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Masqueradis/router.git",
-                "reference": "242805757d825de756da9a575df7623e8188519b"
+                "reference": "4c3672b565d1410211c50f886104e084e4887375"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Masqueradis/router/zipball/242805757d825de756da9a575df7623e8188519b",
-                "reference": "242805757d825de756da9a575df7623e8188519b",
+                "url": "https://api.github.com/repos/Masqueradis/router/zipball/4c3672b565d1410211c50f886104e084e4887375",
+                "reference": "4c3672b565d1410211c50f886104e084e4887375",
                 "shasum": ""
             },
             "type": "library",
@@ -39,9 +39,9 @@
             "description": "Simple php routing mechanism",
             "support": {
                 "issues": "https://github.com/Masqueradis/router/issues",
-                "source": "https://github.com/Masqueradis/router/tree/1.0.1"
+                "source": "https://github.com/Masqueradis/router/tree/1.1.0"
             },
-            "time": "2026-01-16T14:22:00+00:00"
+            "time": "2026-01-18T23:56:15+00:00"
         }
     ],
     "packages-dev": [],

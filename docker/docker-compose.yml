@@ -4,6 +4,8 @@ services:
       context: ..
       dockerfile: docker/php/Dockerfile
     container_name: ${PROJECT_NAME}_php
+    environment:
+      PHP_IDE_CONFIG: "serverName=localhost"
     volumes:
       - ../src:/var/www/html
     networks:
